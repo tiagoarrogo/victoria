@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+
+		<!-- hibernate dialect -->
+		 <property name="hibernate.dialect">org.hibernate.dialect.FirebirdDialect</property>
+
+		<!-- JDBC connection properties (begin) -->
+		<!-- fetch driver from http://firebird.sourceforge.net/ -->
+		<property name="hibernate.connection.driver_class">org.firebirdsql.jdbc.FBDriver</property>
+		<property name="hibernate.connection.useUnicode">false</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>		
+		<property name="hibernate.connection.url">jdbc:firebirdsql:169.57.152.211:VICTORIA?lc_ctype=ISO8859_1</property>
+		<property name="hibernate.connection.username">sysdba</property>
+		<property name="hibernate.connection.password">Path1234</property>
+		
+		<!-- JDBC connection properties (end) -->
+		<property name="hibernate.show_sql">true</property>
+		
+		
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">100</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>	
+		<property name="hibernate.c3p0.max_statements">0</property>
+		<property name="hibernate.c3p0.maxAdministrativeTaskTime">5</property>
+		<!--  End of C3P0 Configuration -->
+		
+	</session-factory>
+
+</hibernate-configuration>
